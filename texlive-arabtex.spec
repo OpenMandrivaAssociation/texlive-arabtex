@@ -1,3 +1,9 @@
+# revision 17095
+# category Package
+# catalog-ctan /language/arabic/arabtex
+# catalog-date 2007-05-24 10:59:21 +0200
+# catalog-license lppl
+# catalog-version 3.11s
 Name:		texlive-arabtex
 Version:	3.11s
 Release:	1
@@ -202,6 +208,7 @@ LaTeX.
 %doc %{_texmfdistdir}/doc/latex/arabtex/tetex.txt
 %doc %{_texmfdistdir}/doc/latex/arabtex/uighur.ps
 %doc %{_texmfdistdir}/doc/latex/arabtex/xarbsymb.dat
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -212,3 +219,5 @@ LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
