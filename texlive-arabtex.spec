@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 ArabTeX is a package extending the capabilities of TeX/LaTeX to
@@ -31,20 +29,12 @@ Adobe Type 1). The Arabic font is presently only available in
 the Naskhi style. ArabTeX will run with Plain TeX and also with
 LaTeX.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -209,7 +199,6 @@ LaTeX.
 %doc %{_texmfdistdir}/doc/latex/arabtex/tetex.txt
 %doc %{_texmfdistdir}/doc/latex/arabtex/uighur.ps
 %doc %{_texmfdistdir}/doc/latex/arabtex/xarbsymb.dat
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -220,5 +209,3 @@ LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
