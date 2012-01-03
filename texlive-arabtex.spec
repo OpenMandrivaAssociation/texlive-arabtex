@@ -6,7 +6,7 @@
 # catalog-version 3.11s
 Name:		texlive-arabtex
 Version:	3.11s
-Release:	1
+Release:	2
 Summary:	Macros and fonts for typesetting Arabic
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/arabic/arabtex
