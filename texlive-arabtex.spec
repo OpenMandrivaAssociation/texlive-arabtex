@@ -1,12 +1,12 @@
-# revision 17095
+# revision 25711
 # category Package
 # catalog-ctan /language/arabic/arabtex
-# catalog-date 2007-05-24 10:59:21 +0200
+# catalog-date 2012-03-20 14:44:41 +0100
 # catalog-license lppl
-# catalog-version 3.11s
+# catalog-version 3.17 
 Name:		texlive-arabtex
-Version:	3.11s
-Release:	2
+Version:	3.17
+Release:	1
 Summary:	Macros and fonts for typesetting Arabic
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/arabic/arabtex
