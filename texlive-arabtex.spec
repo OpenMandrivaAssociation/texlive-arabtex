@@ -3,7 +3,7 @@ Version:	64260
 Release:	2
 Summary:	Macros and fonts for typesetting Arabic
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/arabic/arabtex
+URL:		https://www.ctan.org/tex-archive/language/arabic/arabtex
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/arabtex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/arabtex.doc.r%{version}.tar.xz
